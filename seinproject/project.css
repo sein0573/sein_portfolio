@@ -1,0 +1,190 @@
+* {
+    margin: 0 15px;
+     padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: white;
+    height: 60px;
+    display: flex;
+    justify-content: space-between; /* 로고 왼쪽, nav 오른쪽 */
+    align-items: center;
+    padding: 0 40px; /* 좌우 여백 */
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.logo a {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.nav {
+    display: flex;
+    gap: 30px; /* 메뉴 간격 */
+}
+
+.nav-menu {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav-menu1{
+    text-decoration: none;
+    background-color: gray;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 4px;
+    
+}
+.nav-menu:hover {
+    background-color: gray;
+    color: white;
+}
+.menu-toggle-btn{
+    color: black;
+    font-size: 25px;
+    background: transparent; 
+    border: none;
+    display: none;
+    cursor: pointer;
+ }
+
+/* 메인 시작 */
+main {
+    display: flex;
+    justify-content: center;      /* 가운데 정렬 */
+    align-items: center;
+    height: 800px;
+    background-color: rgba(194, 194, 194, 0.445);
+    margin: 0;
+}
+
+/*  이미지 + 폴더그룹 묶음 */
+.main-content {
+    display: flex;
+    align-items: center;          
+    justify-content: space-around;
+    gap: 40px;                    
+    flex-wrap: wrap;              /* 화면이 작아지면 자동 줄바꿈 */
+    transition: all 0.5s ease;
+}
+
+/* 이미지 */
+.main-img img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 폴더 컨테이너 */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    flex: 1; /* 🔹 공간을 유연하게 채움 */
+}
+
+/* 폴더 카드 */
+.folder-group {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 30%;
+    max-width: 350px;
+    min-width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.folder-group summary {
+    font-size: 1.2rem;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+}
+.folder-group li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #f0f0f0;
+}
+
+.folder-group li:last-child {
+     border-bottom: none;
+}
+
+.folder-group a {
+    color: #555;
+    font-weight: normal;
+    display: block;
+    transition: 0.2s;
+}
+
+.folder-group a:hover {
+    color: #007bff;
+    padding-left: 5px;
+}
+
+/*  큰 화면 (데스크탑) */
+@media (min-width: 1024px) {
+    
+}
+
+/* 작은 화면 (모바일) */
+@media (max-width: 768px) {
+    .menu-toggle-btn{
+        display: block;
+    }
+    .nav{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+    }
+    .nav.active{
+        display: flex;
+    }
+    .nav-menu{
+        pad: 10px 0;
+        font-size: 18px;
+    }
+    .main-content {
+        flex-direction: column; /* 위아래 배치 */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .main-img {
+        display: none; /* 이미지 숨김 */
+        width: 200px;
+        height: 200px;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .folder-group {
+        width: 90%;      /* 화면 너비의 90% 사용 */
+        max-width: 500px; /* 가운데 정렬 유지 */
+    }
+}
+

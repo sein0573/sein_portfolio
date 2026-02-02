@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Example</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">SEIN</a>
+        </div>
+        <div class="nav">
+            <a href="index.html" class="nav-menu">Home</a>
+            <a href="about.html" class="nav-menu">About</a>
+            <a href="project.html" class="nav-menu1">Project</a>
+        </div>
+        <button class="menu-toggle-btn">&#9776; </button>
+    </header>
+
+    <main>
+    <div class="main-content">
+        <div class="main-img">
+            <img src="/image/mainimg.jpg" alt="portfolio image">
+        </div>
+    
+    
+        <div class="container">
+            <div class="folder-group">
+                <details>
+                    <summary>📁2026.01.22</summary>
+                    <ul>
+                        <li><a href="/01.22/자기소개.html">자기소개.html</a></li>
+                    </ul>
+                </details>
+            </div>
+
+            <div class="folder-group">
+                <details>
+                    <summary>📁2026.01.23</summary>
+                    <ul>
+                        <li><a href="/01.23/폼관련태그.html"></a></li>
+                    </ul>
+                </details>
+            </div>
+
+            
+        </div>
+    </div>
+    </main>
+<script>
+  const toggleBtn = document.querySelector('.menu-toggle-btn');
+  const nav = document.querySelector('.nav');
+
+  toggleBtn.addEventListener('click', () => {
+    nav.classList.toggle('active'); // 🔹 active 클래스 토글
+  });
+</script>
+</body>
+</html>
