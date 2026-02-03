@@ -17,6 +17,7 @@ header {
 }
 
 .logo a {
+    font-family: 'PlaywriteCU', cursive;
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
