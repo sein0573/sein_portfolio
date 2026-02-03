@@ -5,6 +5,8 @@
 }
 
 header {
+    position: fixed;
+    width: 100%;
     background-color: white;
     height: 60px;
     display: flex;
@@ -60,8 +62,9 @@ main {
     display: flex;
     justify-content: center;      /* 가운데 정렬 */
     align-items: center;
-    height: 950px;
-    padding: 15px;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 20px;
     background-color: rgba(194, 194, 194, 0.445);
 }
 
@@ -102,7 +105,7 @@ main {
 
 /*  큰 화면 (데스크탑) */
 @media (min-width: 1024px) {
-    
+   
 }
 
 /* 작은 화면 (모바일)*/

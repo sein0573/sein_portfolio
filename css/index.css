@@ -5,6 +5,8 @@
 }
 
 header {
+    position: fixed;
+    width: 100%;
     background-color: white;
     height: 60px;
     display: flex;
@@ -101,19 +103,18 @@ main {
     }
 }
 
-
 .ment1{
-    animation: fadeUp 0.8s ease forwards;
+    animation: fadeUp 4s ease infinite;
     animation-delay: 0.3s;
 }
 
 .main-text h2{
-    animation: fadeUp 0.8s ease forwards;
+    animation: fadeUp 4s ease infinite;
     animation-delay: 0.8s;
 }
 
 .main-text a{
-    animation: fadeUp 0.8s ease forwards;
+    animation: fadeUp 4s ease infinite;
     animation-delay: 1.3s;
 }
 
