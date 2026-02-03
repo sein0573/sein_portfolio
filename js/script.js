@@ -18,6 +18,8 @@ const viewer = document.getElementById('img-viewer');
 const viewerImg = document.getElementById('viewer-img');
 const viewerClose = document.querySelector('.img-close');
 const modalImgs = document.querySelectorAll('.modal-img');
+const link = document.getElementById('modal-link');
+
 
 
 cards.forEach(card=>{
@@ -27,6 +29,10 @@ cards.forEach(card=>{
     img.src = card.dataset.img;
     role.textContent = "🛠 사용 기술 : " + card.dataset.role;
     detail.textContent = card.dataset.detail;
+
+    link.href = card.dataset.link || '#';
+    link.style.display = card.dataset.link ? 'inline-block' : 'none';
+
     modal.style.display = 'flex';
   });
 });
@@ -42,10 +48,10 @@ window.addEventListener('click', (e)=>{
 });
 
 // 모달 이미지 클릭 → 크게 보기
-img.addEventListener('click', ()=>{
-    viewer.style.display = 'flex';
-    viewerImg.src = img.src;
-});
+// img.addEventListener('click', ()=>{
+//     viewer.style.display = 'flex';
+//     viewerImg.src = img.src;
+// });
 
 
 // X 버튼
