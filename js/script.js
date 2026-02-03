@@ -11,6 +11,8 @@ const title = document.getElementById('modal-title');
 const desc = document.getElementById('modal-desc');
 const img = document.getElementById('modal-img');
 const role = document.getElementById('modal-role');
+const detail = document.getElementById('modal-detail');
+
 
 const closeBtn = document.querySelector('.close');
 
@@ -19,7 +21,8 @@ cards.forEach(card=>{
     title.textContent = card.dataset.title;
     desc.textContent = card.dataset.desc;
     img.src = card.dataset.img;
-    role.textContent = "사용 기술 : " + card.dataset.role;
+    role.textContent = "🛠 사용 기술 : " + card.dataset.role;
+    detail.textContent = card.dataset.detail;
     modal.style.display = 'flex';
   });
 });
