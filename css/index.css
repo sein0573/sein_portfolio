@@ -85,7 +85,29 @@ main {
     border-radius: 50%;
     object-fit: cover;
     transition: all 0.3s ease;
+    transform-origin: center;
+    animation: slideRotateIn 8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+                /* rotateImg 8s linear infinite 6s; */
 }
+/* 왼쪽에서 돌면서 들어오기 */
+@keyframes slideRotateIn{
+    from{
+        transform: translateX(-100vw) rotate(0deg);
+        opacity: 0;
+    }to{
+        transform: translateX(0) rotate(720deg);
+        opacity: 1;
+    }
+}
+/* 제자리에서 계속 돌기 */
+/* @keyframes rotateImg{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} */
 
 .ment1,
 .main-text h2{
