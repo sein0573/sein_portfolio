@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header Example</title>
-    <link rel="stylesheet" href="/sein_portfolio/seinproject/css/project.css">
+    <link rel="stylesheet" href="./css/project.css">
 </head>
 <body>
     <header>
@@ -18,18 +18,65 @@
         </div>
         <button class="menu-toggle-btn">&#9776; </button>
     </header>
-
     <main>
-        <div class="porflio-grid">
-            <div class="card">
+        <div class="project-title">
+            <span>PROJECT</span>
+        </div>
 
+        <div class="portfolio-grid">
+            <div class="card" 
+                data-title="삼성전자 웹페이지 따라만들기" 
+                data-desc="📅01.27" 
+                data-img="./image/samsungback.jpg"
+                data-role="HTML, CSS">
+                <img src="./image/samsungback.jpg" alt="">
+                <div class="overlay">
+                    <h3>삼성전자</h3>
+                </div>
+            </div>
+            <div class="card" 
+                data-title="블루보틀 웹페이지 따라만들기" 
+                data-desc="📅01.27" 
+                data-img="./image/bluebottleback.jpg"
+                data-role="HTML, CSS">
+                <img src="./image/bluebottleback.jpg" alt="">
+                <div class="overlay">
+                    <h3>블루보틀</h3>
+                </div>
+            </div>
+            <div class="card"
+                data-title="HF 웹페이지 따라만들기"
+                data-desc="📅01.28" 
+                data-img="./image/hfback.jpg"
+                data-role="HTML, CSS">
+                <img src="./image/hfback.jpg" alt="">
+                <div class="overlay">
+                    <h3>HF 한국주택금융공사</h3>
+                </div>
+            </div>
+            <div class="card" 
+                data-title="Apple 웹페이지 따라만들기"
+                data-desc="📅01.30" 
+                data-img="./image/appleback.jpg"
+                data-role="HTML, CSS">
+                <img src="./image/appleback.jpg" alt="">
+                <div class="overlay">
+                    <h3>Apple</h3>
+                </div>
             </div>
         </div>
-    
-        
-        
-    </div>
     </main>
-<script src="/sein_portfolio/seinproject/js/script.js"></script>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img  id="modal-img" alt="">
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+            <p id="modal-role"></p>
+        </div>
+    </div>
+
+<script src="./js/script.js"></script>
 </body>
 </html>

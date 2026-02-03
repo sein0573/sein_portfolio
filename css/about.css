@@ -1,5 +1,5 @@
 * {
-    margin: 0 15px;
+    margin: 0;
      padding: 0;
     box-sizing: border-box;
 }
@@ -60,7 +60,8 @@ main {
     display: flex;
     justify-content: center;      /* 가운데 정렬 */
     align-items: center;
-    height: 800px;
+    height: 950px;
+    padding: 15px;
     background-color: rgba(194, 194, 194, 0.445);
 }
 
@@ -80,6 +81,7 @@ main {
     border-radius: 50%;
     object-fit: cover;
     transition: all 0.3s ease; 
+    margin-right: 100px;
 }
 
 .about-text h2{
@@ -95,13 +97,14 @@ main {
     background-color: gray;
 }
 .about-text p{
-    margin: 20px;
+    margin: 25px;
 }
 
 /*  큰 화면 (데스크탑) */
 @media (min-width: 1024px) {
     
 }
+
 /* 작은 화면 (모바일)*/
 @media (max-width: 768px) {
     .menu-toggle-btn{
