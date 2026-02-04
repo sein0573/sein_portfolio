@@ -14,6 +14,8 @@ header {
     align-items: center;
     padding: 0 40px; /* 좌우 여백 */
     /* border-bottom: 1px solid #ccc; */
+    z-index: 9999;
+    transform: translateZ(0);
 }
 
 .logo a {
